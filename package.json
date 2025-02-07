@@ -1,0 +1,25 @@
+{
+  "name": "nikolai-kim-website",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "dev": "npx @11ty/eleventy --serve",
+    "build": "npx @11ty/eleventy"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/RiverSongFox/nikolai-kim-website.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "module",
+  "bugs": {
+    "url": "https://github.com/RiverSongFox/nikolai-kim-website/issues"
+  },
+  "homepage": "https://github.com/RiverSongFox/nikolai-kim-website#readme",
+  "dependencies": {
+    "@11ty/eleventy": "^3.0.0"
+  }
+}
