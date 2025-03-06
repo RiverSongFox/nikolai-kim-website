@@ -101,6 +101,9 @@
               Signal
             </a>
           </li>
+          <li class="plain" id="time">
+            <noscript>I live in UTC-6</noscript>
+          </li>
         </ul>
       </section>
     </article>
@@ -254,8 +257,33 @@
       </li>
       <li>
         This website uses <a href="https://tinylytics.app/">Tinylytics</a>, a privacy-focused analytics service
-    </p>
+        </p>
   </footer>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const el = document.getElementById('time');
+      const updateTime = () => {
+        el.innerHTML = `It's ${new Date().toLocaleString('en', {
+          timeZone: 'America/Regina',
+          month: 'short',
+          day: 'numeric',
+          hour: 'numeric',
+          minute: 'numeric'
+        })} for me`;
+      };
+
+      updateTime();
+
+      const now = new Date();
+      const delay = 60000 - (now.getSeconds() * 1000 + now.getMilliseconds());
+
+      setTimeout(() => {
+        updateTime();
+        setInterval(updateTime, 60000);
+      }, delay);
+    });
+  </script>
 </body>
 
 </html>
