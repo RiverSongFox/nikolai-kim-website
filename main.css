@@ -1,0 +1,136 @@
+body {
+  max-width: 700px;
+  margin: 20px auto;
+  padding: 0 20px;
+  line-height: 1.5;
+}
+
+img {
+  max-width: 100%;
+}
+
+footer {
+  font-size: small;
+  text-align: center;
+  margin-top: 4rem;
+}
+
+footer ul {
+  margin-top: 2rem;
+  list-style: none;
+}
+
+footer li:nth-child(n+2) {
+  margin-top: .5rem;
+}
+
+.company_logos {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+}
+
+.company_logos img {
+  max-height: 2rem;
+  width: auto;
+  margin: .5rem 1.5rem;
+  border-radius: 0;
+}
+
+.icon-badges {
+  display: flex;
+  flex-wrap: wrap;
+  gap: .75rem;
+  padding: 0;
+}
+
+.icon-badges li {
+  display: flex;
+  align-items: center;
+  border: 1px solid;
+  padding: .25rem .75rem;
+}
+
+.icon-badges svg {
+  width: 1rem;
+  height: 1rem;
+
+  margin-right: .5rem;
+}
+
+.icon-badges a {
+  text-decoration: none;
+  color: initial;
+
+  display: flex;
+  align-items: center;
+}
+
+.icon-badges li:has(a) {
+  background-color: #fff;
+}
+
+.emoji {
+  height: 1.2em;
+  margin-bottom: -.2em;
+}
+
+.resumeItem>header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.resumeItem .resumeItem__logo {
+  max-height: 2rem;
+}
+
+/*
+ * Bio
+ */
+
+.bio {
+  display: flex;
+  background-color: #e7f7ff;
+  margin: 0 -2rem;
+  padding: 2rem;
+  gap: 1.5rem;
+}
+
+@media screen and (max-width: 719px) {
+  .bio {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+@media screen and (min-width: 720px) {
+  .bio section>h2 {
+    margin-top: 0;
+  }
+}
+
+.bio .avatar {
+  max-width: 200px;
+  max-height: 200px;
+}
+
+/*
+ * Utilities
+ */
+
+span.nobr {
+  white-space: nowrap;
+}
+
+@media screen and (min-width: 720px) {
+  section.columns {
+    columns: 2;
+  }
+}
+
+section.columns *:first-child {
+  margin-top: 0;
+}
