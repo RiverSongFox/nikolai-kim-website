@@ -94,6 +94,10 @@ footer ul {
   list-style: none;
 }
 
+footer li:nth-child(n+2) {
+  margin-top: .5rem;
+}
+
 span.nobr {
   white-space: nowrap;
 }
