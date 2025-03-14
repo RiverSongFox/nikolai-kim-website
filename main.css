@@ -1,4 +1,28 @@
+:root {
+  --bg-color: #fff;
+  --text-color: #192128;
+  --light-color: #edf4fc;
+  --border-color: #7a8a99;
+  --special-bg-color: #2f5c7b;
+  --special-bg-color-hover: #467595;
+  --special-text-color: #fff;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg-color: #202020;
+    --text-color: #edeff2;
+    --light-color: #253745;
+    --border-color: #6a7783;
+    --special-bg-color: #26465e;
+    --special-text-color: #edeef2;
+    --special-bg-color-hover: #36566c;
+  }
+}
+
 body {
+  background-color: var(--bg-color);
+  color: var(--text-color);
   max-width: 700px;
   margin: 20px auto;
   padding: 0 20px;
@@ -20,14 +44,16 @@ img {
   display: flex;
   align-items: center;
   padding: .25rem;
+  fill: var(--text-color);
 }
 
 .icon-badges li:not(.plain) {
   padding: .25rem .75rem;
-  border: 1px solid;
+  border: 1px solid var(--border-color);
 }
 
 .icon-badges svg {
+  fill: inherit;
   width: 1rem;
   height: 1rem;
 
@@ -36,14 +62,20 @@ img {
 
 .icon-badges a {
   text-decoration: none;
-  color: initial;
+  color: inherit;
 
   display: flex;
   align-items: center;
 }
 
 .icon-badges li:has(a) {
-  background-color: #fff;
+  color: var(--special-text-color);
+  fill: var(--special-text-color);
+  background-color: var(--special-bg-color);
+}
+
+.icon-badges li:has(a):hover {
+  background-color: var(--special-bg-color-hover);
 }
 
 .company_logos {
@@ -51,19 +83,17 @@ img {
   flex-wrap: wrap;
   justify-content: center;
   align-items: center;
-  gap: 1rem;
+  gap: .5rem 2rem;
 }
 
 .company_logos img {
-  max-height: 2rem;
+  max-height: 50px;
   width: auto;
-  margin: .5rem 1.5rem;
-  border-radius: 0;
 }
 
 .bio {
   display: flex;
-  background-color: #e7f7ff;
+  background-color: var(--light-color);
   margin: 0 -2rem;
   padding: 2rem;
   gap: 1.5rem;
@@ -95,6 +125,7 @@ footer {
 
 footer ul {
   margin-top: 2rem;
+  padding: 0;
   list-style: none;
 }
 
